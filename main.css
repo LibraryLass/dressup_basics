@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bgc1: #d63900;
+    --bgc2: #f06838;
+    --bgc3: #ff58a9;
+    --bgc4: #ff7fa3;
+    --bgc5: #ffdde7;
+    --border1: 5px solid var(--bgc4);
+    --br1: 10px;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: var(--bgc4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer{
+    background-color: var(--bgc5);
+    min-height: 50px;
+    width: 80vw;
+}
+
+header, footer{
+    padding: 10px;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+header h1, footer p{
+    color: var(--bgc3);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/*gameboard*/
+main{
+    background-color: #fff;
+    padding: 20px 35px;
+    flex: 1 0 auto;
+    min-height: 0;
+    margin: 20px auto;
+    border-radius: var(--br1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*body & item main divs */
+.characterDisplay{
+    background-color: var(--bgc5);
+    height: 90%;
+    width: 32.5%;
+    border: var(--border1);
+    border-radius: var(--br1);
+    /*body setup*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.items{
+    background-color: var(--bgc5);
+    height: 90%;
+    width: 62.5%;
+    border: var(--border1);
+    border-radius: var(--br1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*character itself*/
+.slot{
+    background-color: #fff;
+    border: 3px solid #fff;
+    box-shadow: 3px 3px #fff;
+}
+
+.headSlot{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.clothesSlot{
+  width: 50px; 
+  height: 150px; 
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+
+/*item categories*/
+.little{
+    background-color: #fff;
+    border: 4px solid #fff;
+    min-height: 40px;
+    min-width: 100px;
+    margin: 10px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.little p{
+    color: var(--bgc1);
+    margin: auto 10px;
+}
+
+.selectorBtn{
+    background-color: var(--bgc2);
+    border: 1px solid var(--bgc1);
+    width: 25px;
+    color: #fff;
+}
+
+
