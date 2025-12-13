@@ -10,7 +10,7 @@
     --bgc3: #ff58a9;
     --bgc4: #ff7fa3;
     --bgc5: #ffdde7;
-    --border1: 5px solid var(--bgc4);
+    --border1: 5px solid var(--bgc3);
     --br1: 10px;
 }
 
@@ -19,28 +19,52 @@ html, body{
 }
 
 body{
-    background-color: var(--bgc4);
+    background-color: var(--bgc3);
+    padding-right: 45px;
+    padding-left: 45px;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    border-right: 45px double var(--bgc5);
+    border-left: 45px double var(--bgc5);
+
 }
 
 header, main, footer{
     background-color: var(--bgc5);
-    min-height: 50px;
+    min-height: 75px;
     width: 80vw;
+}
+
+header{
+    border-bottom-left-radius: var(--br1);
+    border-bottom-right-radius: var(--br1);
+}
+
+footer{
+    border-top-right-radius: var(--br1);
+    border-top-left-radius: var(--br1);
 }
 
 header, footer{
     padding: 10px;
     height: fit-content;
     margin: 0 auto;
+    align-content: center;
+}
+
+h1{
+    font-size: 2em;
 }
 
 header h1, footer p{
     color: var(--bgc3);
     width: fit-content;
     margin: 0 auto;
+    font-family: cursive;
 }
 
 /*gameboard*/
@@ -49,7 +73,7 @@ main{
     padding: 20px 35px;
     flex: 1 0 auto;
     min-height: 0;
-    margin: 20px auto;
+    margin: 5px auto;
     border-radius: var(--br1);
     display: flex;
     justify-content: space-between;
