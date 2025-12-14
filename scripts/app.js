@@ -11,6 +11,12 @@ const headColors =[
     "#592f2a"
 ]
 
+const hairStyles = [
+    "a",
+    "b",
+    "c"
+]
+
 const clothesColors = [
     "#9b5de5",
     "#f15bb5",
@@ -19,39 +25,63 @@ const clothesColors = [
     "#00f5d4"
 ]
 
-let headIndex = 3;
-let clothesIndex = 1;
+let headIndex = 0;
+let hairIndex = 0;
+let clothesIndex = 0;
+
 const headDisplay = document.querySelector(".headSlot");
 const clothesDisplay = document.querySelector(".clothesSlot");
 
 const headBack = document.querySelector(".head .backBtn");
 const headNext = document.querySelector(".head .nextBtn");
+const hairBack = document.querySelector(".hair .backBtn");
+const hairNext = document.querySelector(".hair .nextBtn")
 const clothesBack = document.querySelector(".clothes .backBtn");
 const clothesNext = document.querySelector(".clothes .nextBtn");
 
 
 headBack.addEventListener("click", prevHead);
 headNext.addEventListener("click", nextHead);
+hairBack.addEventListener("click", prevHair);
+hairNext.addEventListener("click", nextHair);
 clothesBack.addEventListener("click", prevClothes);
 clothesNext.addEventListener("click", nextClothes);
 
+function cycle(array, index, direction) {
+    return (index + direction + array.length) % array.length;
+}
+
+function updateHair(){
+    headDisplay.classList.remove(...hairStyles);
+    headDisplay.classList.add(hairStyles[hairIndex]);
+}
 
 function prevHead(){
-    headIndex = (headIndex - 1 + headColors.length) % headColors.length;
+    headIndex = cycle(headColors, headIndex, -1);
     headDisplay.style.backgroundColor = headColors[headIndex];    
 }
 
 function nextHead(){
-    headIndex = (headIndex + 1) % headColors.length;
+    headIndex = cycle(headColors, headIndex, 1)
     headDisplay.style.backgroundColor = headColors[headIndex];
 }
 
+function prevHair(){
+    hairIndex = cycle(hairStyles, hairIndex, -1);
+    updateHair();
+}
+
+function nextHair(){
+    hairIndex = cycle(hairStyles, hairIndex, 1);
+    updateHair();
+}
+
 function prevClothes(){
-    clothesIndex = (clothesIndex - 1 + clothesColors.length) % clothesColors.length;
+    clothesIndex = cycle(clothesColors, clothesIndex, -1);
     clothesDisplay.style.backgroundColor = clothesColors[clothesIndex];
 }
 
 function nextClothes(){
-    clothesIndex = (clothesIndex + 1) % clothesColors.length;
+    clothesIndex = cycle(clothesColors, clothesIndex, 1);
     clothesDisplay.style.backgroundColor = clothesColors[clothesIndex];
 }

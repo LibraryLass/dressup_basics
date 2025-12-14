@@ -60,6 +60,10 @@ h1{
     font-size: 2em;
 }
 
+p{
+    font-size: 1.25em;
+}
+
 header h1, footer p{
     color: var(--bgc3);
     width: fit-content;
@@ -109,8 +113,35 @@ main{
 /*character itself*/
 .slot{
     background-color: #fff;
-    border: 3px solid #fff;
-    box-shadow: 3px 3px #fff;
+    box-shadow:3px 3px 5px var(--bgc4);
+}
+
+
+.hidden{
+    opacity: 0;
+}
+
+
+/*hairStyles*/
+/*a*/
+.a{
+    border: 1px solid #e0ac69;
+    border-top: 8px dotted black;
+    
+}
+
+/*b*/
+.b{
+    border: 1px solid #e0ac69;
+    border-top: 8px solid black;
+}
+
+/*c*/
+.c{
+    border: 1px solid #e0ac69;
+    border-top: 8px solid black;
+    border-right:3px solid black;
+    border-left:3px solid black;
 }
 
 .headSlot{
