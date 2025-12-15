@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dressup</title>
+    <title>CSStyles</title>
     <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
     <header>
-        <h1>The Lacroix of Dressup</h1>
+        <h1>CSStyles</h1>
     </header>
     <main>
         <div class="characterDisplay">
             <div class="slot headSlot"></div>
-            <div class="slot clothesSlot"></div>
+            <div class="slot bodyA"></div>
+            <div class="slot bodyB"></div>
         </div>
         <div class="items">
             <div class="little head">
@@ -22,10 +23,17 @@
                 <p>Skin Tone</p>
                 <button class="nextBtn selectorBtn">></button>
             </div>
-            <div class="little hair">
-                <button class="backBtn selectorBtn"><</button>
-                <p>Hair Type</p>
-                <button class="nextBtn selectorBtn">></button>
+            <div class = "littleGroup hair">
+                <div class="little type">
+                    <button class="backBtn selectorBtn"><</button>
+                    <p>Hair Style</p>
+                    <button class="nextBtn selectorBtn">></button>
+                </div>
+                <div class="little color">
+                    <button class="backBtn selectorBtn"><</button>
+                    <p>Hair Color</p>
+                    <button class="nextBtn selectorBtn">></button>
+                </div>
             </div>
             <div class="little clothes">
                 <button class="backBtn selectorBtn"><</button>
