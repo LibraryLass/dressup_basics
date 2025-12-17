@@ -6,12 +6,22 @@
 
 :root{
     --bgc1: #d63900;
+    --bgc1b: #a0330bd4;
+
     --bgc2: #f06838;
     --bgc3: #ff58a9;
     --bgc4: #ff7fa3;
+    --bgc4b: #ed3d6f;
+
     --bgc5: #ffdde7;
     --border1: 5px solid var(--bgc3);
     --br1: 10px;
+}
+
+.twinkle-star-regular {
+  font-family: "Twinkle Star", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html, body{
@@ -23,6 +33,7 @@ body{
     padding-right: 45px;
     padding-left: 45px;
 
+    font-family: "Twinkle Star", cursive;
     min-height: 100vh;
 
     display: flex;
@@ -70,10 +81,10 @@ p{
 }
 
 header h1, footer p{
-    color: var(--bgc3);
+    color: var(--bgc1b);
     width: fit-content;
     margin: 0 auto;
-    font-family: cursive;
+    font-weight: bold;
 }
 
 /*gameboard*/
@@ -172,6 +183,7 @@ main{
 .bodyB{
     width: 50px;
     height: 75px;
+    margin-top: -2px;
 }
 
 
@@ -196,7 +208,7 @@ main{
 
 /*item categories*/
 .little{
-    background-color: #fff;
+    background-color: var(--bgc4b);
     min-height: 40px;
     min-width: 100px;
     margin: 10px;
@@ -206,28 +218,41 @@ main{
     box-shadow: 0 1px 4px black;
 }
 
+.little:hover{
+}
+
 .little p{
-    color: var(--bgc1);
+    color: #fff;
+
     margin: auto 10px;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 /*buttons*/
 .selectorBtn{
-    background-color: var(--bgc2);
-    border-left: 2px solid var(--bgc1);
-    border-bottom: 4px solid var(--bgc1);
-    border-top: var(--bgc2);
-    border-right: var(--bgc2);
-
+    background-color: var(--bgc4);
+    border-left: 2px solid var(--bgc4b);
+    border-bottom: 4px solid var(--bgc4b);
+    border-top: var(--bgc4b);
+    border-right: var(--bgc4b);
     width: 25px;
     color: #fff;
 }
 
 .backBtn{
-    border-right: 2px solid var(--bgc1);
-    border-bottom: 4px solid var(--bgc1);
-    border-top: var(--bgc2);
-    border-left: var(--bgc2); 
+    border-right: 2px solid var(--bgc4b);
+    border-bottom: 4px solid var(--bgc4b);
+    border-top: var(--bgc4b);
+    border-left: var(--bgc4b); 
 }
+
+.selectorBtn:hover{
+    border-bottom: 2px solid var(--bgc4b);
+    border-left: 1px solid var(--bgc4b);
+    border-right: 1px solid var(--bgc4b);
+}
+
+
 
 
